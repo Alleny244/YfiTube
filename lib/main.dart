@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yfitube/pages/facebook.dart';
+import 'package:yfitube/pages/firstPage.dart';
 import 'package:yfitube/pages/instagram.dart';
 import 'package:yfitube/pages/youTube.dart';
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       ),
       home: HomeLoader(),
       routes: {
+        '/firstPage': (context) => FirstPage(),
         '/youtube': (context) => Youtube(),
         '/facebook': (context) => Facebook(),
         '/instagram': (context) => Instagram(),
@@ -35,7 +37,7 @@ class _HomeLoaderState extends State<HomeLoader> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 3),
-        () => {Navigator.pushReplacementNamed(context, '/youtube')});
+        () => {Navigator.pushReplacementNamed(context, '/firstPage')});
   }
 
   @override

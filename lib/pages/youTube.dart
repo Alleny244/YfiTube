@@ -5,13 +5,11 @@ class Youtube extends StatefulWidget {
   _YoutubeState createState() => _YoutubeState();
 }
 
-class _YoutubeState extends State<Youtube> {
+class _YoutubeState extends State<Youtube> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Text("Youtube"),
-      ),
-    );
+    return (Scaffold(
+      body: Text("Youtube"),
+    ));
   }
 }
