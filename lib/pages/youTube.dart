@@ -34,32 +34,33 @@ class _YoutubeState extends State<Youtube> {
   @override
   Widget build(BuildContext context) {
     return (Scaffold(
-        body: Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: EdgeInsets.all(20),
-            child: TextField(
-              controller: controller,
-              decoration: InputDecoration(
-                errorText: error,
-                border: OutlineInputBorder(),
-                hintText: 'Paste the link',
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: TextField(
+                controller: controller,
+                decoration: InputDecoration(
+                  errorText: error,
+                  border: OutlineInputBorder(),
+                  hintText: 'Paste the link',
+                ),
               ),
             ),
-          ),
-          ElevatedButton.icon(
-            style: ButtonStyle(
-              backgroundColor:
-                  MaterialStateProperty.all<Color>(Colors.red[600]),
+            ElevatedButton.icon(
+              style: ButtonStyle(
+                backgroundColor:
+                    MaterialStateProperty.all<Color>(Colors.red[600]),
+              ),
+              onPressed: download,
+              icon: Icon(Icons.download_outlined),
+              label: Text("Download"),
             ),
-            onPressed: download,
-            icon: Icon(Icons.download_outlined),
-            label: Text("Download"),
-          ),
-        ],
+          ],
+        ),
       ),
-    )));
+    ));
   }
 }

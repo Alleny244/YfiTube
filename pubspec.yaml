@@ -24,7 +24,10 @@ environment:
 
 
 dependencies:
-  
+  permission_handler: ^8.1.4+2
+  ext_storage: 
+  dio: ^4.0.0
+  flutter_insta: ^1.0.0
   flutter_youtube_downloader:
   flutter_svg: ^0.22.0
   flutter:
